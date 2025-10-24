@@ -29,7 +29,21 @@ fun main() {
         append("Hello")
         append("World")
     }
+
+    // Дженерики
+    val box1 = Box("String")
+    val box2 = Box(1)
+
+    // Автоматическое определение типов данных свойств класса
+    val item1 = box1.item
+    val item2 = box2.item
+
+    println(item1::class)
+    println(item2::class)
 }
+
+// Класс дженерик
+class Box<T>(val item: T)
 
 fun divide(a: Int, b: Int): Int {
     return try {
